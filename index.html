@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUBchat - Chat với người lạ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="header">
+            <h1>HUBchat</h1>
+            <p>Chat ẩn danh với người lạ</p>
+        </div>
+        <div id="messages">
+            <div class="message system">Chào mừng bạn đến với HUBchat! Nhấn "Tìm người lạ" để bắt đầu.</div>
+        </div>
+        <div id="status">Đang chờ...</div>
+        <div id="chat-input">
+            <input type="text" id="message-input" placeholder="Nhập tin nhắn..." disabled>
+            <button id="send-button" disabled>Gửi</button>
+        </div>
+        <button id="control-button">Tìm người lạ</button>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
